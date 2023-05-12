@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ba2g4nx2rf87v"
+path="res://.godot/imported/SprMarioBig_Turn.png-3f88ed13986d4fa198b594b4f9942238.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Turn.png"
+dest_files=["res://.godot/imported/SprMarioBig_Turn.png-3f88ed13986d4fa198b594b4f9942238.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

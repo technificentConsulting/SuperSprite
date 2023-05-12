@@ -1,0 +1,169 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4hlug2xvdhef"]
+
+[ext_resource type="Script" path="res://SuperSprite/PlayerSpawner.cs" id="1"]
+[ext_resource type="Script" path="res://SuperSprite/PlayerCamera.cs" id="2"]
+[ext_resource type="Environment" uid="uid://ds32gpti5p438" path="res://SuperSprite/default_env.tres" id="2_dga7n"]
+[ext_resource type="Script" path="res://SuperSprite/Utilities/DebugText.cs" id="3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_dga7n")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.5, 0.709406, -0.496732, 0, 0.573576, 0.819152, 0.866025, -0.409576, 0.286788, 0, 8.76339, -4.33862)
+shadow_enabled = true
+shadow_bias = 0.05
+
+[node name="PlayerSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424299, 1.5551, -5.38312)
+script = ExtResource("1")
+InitialForm = 1
+SpriteFolderName = "Mario"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30939, 27.6713)
+environment = ExtResource("2_dga7n")
+current = true
+script = ExtResource("2")
+TargetPositionOffset = Vector3(0, 2, 10)
+
+[node name="Stage" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.38312)
+
+[node name="Ground" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.263393, 0)
+use_collision = true
+size = Vector3(50, 1, 3)
+
+[node name="Block" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.26339, -0.5)
+use_collision = true
+
+[node name="Block2" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.26339, -0.5)
+use_collision = true
+
+[node name="Block7" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 9, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 4.26339, -0.5)
+use_collision = true
+size = Vector3(1, 3, 1)
+
+[node name="CSGBox2" type="CSGBox3D" parent="Stage/Block7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5.26339, -0.5)
+use_collision = true
+size = Vector3(1, 5, 1)
+
+[node name="Block9" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 3.5, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.263393, -0.5)
+use_collision = true
+
+[node name="Block10" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 6, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.736607, -0.5)
+use_collision = true
+
+[node name="Block14" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 7, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.763393, -0.5)
+use_collision = true
+
+[node name="Block11" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 8, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.763393, -0.5)
+use_collision = true
+size = Vector3(4, 1, 1)
+
+[node name="Block12" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 9, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.26339, -0.5)
+use_collision = true
+size = Vector3(15, 1, 1)
+
+[node name="Block3" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block3"]
+transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, -2.5, -0.246493, -0.5)
+use_collision = true
+size = Vector3(6.82173, 1, 1)
+
+[node name="Block4" type="Node3D" parent="Stage"]
+transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, -17, 2, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block4"]
+transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, -2.92872, -0.322087, -0.5)
+use_collision = true
+size = Vector3(6.82173, 1, 1)
+
+[node name="Block5" type="Node3D" parent="Stage"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -19, 2, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block5"]
+transform = Transform3D(0.996195, 0.0871555, 0, -0.0871555, 0.996195, 0, 0, 0, 1, -3.38636, -0.613635, -0.5)
+use_collision = true
+size = Vector3(6.82173, 1, 1)
+
+[node name="Block6" type="Node3D" parent="Stage"]
+transform = Transform3D(0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 0, 0, 1, -22, 3, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block6"]
+transform = Transform3D(0.996195, -0.087156, 0, 0.087156, 0.996195, 0, 0, 0, 1, -3.73447, -1.28234, -0.5)
+use_collision = true
+size = Vector3(6.82173, 1, 1)
+
+[node name="Block15" type="Node3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 10, -0.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage/Block15"]
+transform = Transform3D(1, -2.5332e-07, 0, 2.5332e-07, 1, 0, 0, 0, 1, 5, -9.23661, 0)
+use_collision = true
+size = Vector3(16, 7, 3)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Stage/Block15/CSGBox3D"]
+transform = Transform3D(1, -1.1073e-14, -2.5332e-07, -2.5332e-07, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, 0)
+operation = 2
+radius = 7.0
+height = 4.0
+sides = 38
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 500.0
+offset_bottom = 500.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+scroll_following = true
+script = ExtResource("3")

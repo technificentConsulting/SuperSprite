@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxjvh1uf7isg5"]
+
+[ext_resource type="Script" path="res://SuperSprite/Players/Forms/SmallPlayer.cs" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://nlagdn0c7ycl" path="res://SuperSprite/Players/Sprites/Mario/SMALL.tres" id="2_5gkul"]
+
+[sub_resource type="CylinderShape3D" id="1"]
+height = 0.99
+radius = 0.4
+
+[sub_resource type="CylinderShape3D" id="2"]
+height = 1.6
+radius = 0.4
+
+[sub_resource type="CylinderShape3D" id="3"]
+height = 0.419661
+radius = 0.4
+
+[node name="SmallPlayer" type="CharacterBody3D"]
+collision_layer = 4
+script = ExtResource("1")
+
+[node name="SmallCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, -0.652, -0.5)
+shape = SubResource("1")
+
+[node name="BigCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, -0.347, -0.5)
+shape = SubResource("2")
+
+[node name="PlayerSprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.194542, -0.5)
+pixel_size = 0.0595
+billboard = 1
+double_sided = false
+alpha_cut = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_5gkul")
+animation = &"Walk"
+autoplay = "Walk"
+
+[node name="FloorRayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, 0, -0.5)
+target_position = Vector3(0, -3, 0)
+
+[node name="ActorDetector" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+collision_layer = 4
+collision_mask = 6
+
+[node name="FeetCollision" type="CollisionShape3D" parent="ActorDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0403175, -1.04116, -0.5)
+shape = SubResource("3")

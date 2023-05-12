@@ -1,0 +1,122 @@
+[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://cu8c2j05irshe"]
+
+[ext_resource type="Texture2D" uid="uid://n6mdyxcf644j" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Fall.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://biy30x5txalcn" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_HighJump.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ba2g4nx2rf87v" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Turn.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dsxl8fgbehkrm" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_LongRun1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b8ko7eaps4wa1" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_LongRun2.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cdp0p0dhrn56p" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_LongRun3.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c7qpi5fqyfbaw" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Slide.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bdkj5iuvmbqtx" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Crouch.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://q6nvf5f51day" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Jump.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://ckfqnj2sb5qxq" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Idle.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b21ctbeft3wvc" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Walk1.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://x6kpaf2f4de5" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_Walk2.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://d28e03v4ajfis" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_SpinJump3.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://w0ypks2v65ty" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_SpinJump1.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://crgq1inr3h73t" path="res://SuperSprite/Players/Sprites/Mario/Big Sprites/SprMarioBig_SpinJump2.png" id="15"]
+
+[resource]
+resource_name = "BIG"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8")
+}],
+"loop": true,
+"name": &"Crouch",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": true,
+"name": &"HighJump",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
+"loop": true,
+"name": &"LongRun",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7")
+}],
+"loop": true,
+"name": &"Slide",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}],
+"loop": true,
+"name": &"SpinJump",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"Turn",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
